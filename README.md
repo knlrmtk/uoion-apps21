@@ -53,13 +53,13 @@ or pass it as an environment variable:
 
 Project Structure: Your project should look like this:
 
-uoion-apps20/
-├── Dockerfile
-├── docker-compose.yml
-├── pom.xml
-├── src/
-└── target/
-    └── uoion-apps20-0.0.1-SNAPSHOT.jar
+    uoion-apps20/
+    ├── Dockerfile
+    ├── docker-compose.yml
+    ├── pom.xml
+    ├── src/
+    └── target/
+        └── uoion-apps20-0.0.1-SNAPSHOT.jar
 
 
 Build the Docker image
