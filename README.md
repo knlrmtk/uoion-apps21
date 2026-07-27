@@ -1,4 +1,4 @@
-# Uoion Apps21 : Springboot JAVA Application with MySQl database connection.
+# Uoion Apps21 : Springboot JAVA Application with MySQL database connection.
 
     docker compose up -d
     docker compose up -d --build
@@ -29,23 +29,12 @@ Verify Spring Boot is listening:
     
 
 Run the container: If your MySQL is running on your Ubuntu host:
-    docker run -d \
-  --name uoion-apps20 \
-  -p 8080:8080 \
-  -e SPRING_DATASOURCE_URL=jdbc:mysql://host.docker.internal:3306/studentdb \
-  -e SPRING_DATASOURCE_USERNAME=root \
-  -e SPRING_DATASOURCE_PASSWORD=root123 \
-  uoion-apps20:v1
+
+    docker run -d --name uoion-apps21 -p 8080:8080 -e SPRING_DATASOURCE_URL=jdbc:mysql://host.docker.internal:3306/studentdb -e SPRING_DATASOURCE_USERNAME=root -e SPRING_DATASOURCE_PASSWORD=root123 uoion-apps20:v1
 
 On Ubuntu, host.docker.internal may not be available by default. You can add it with:
-    docker run -d \
-  --name uoion-apps20 \
-  --add-host=host.docker.internal:host-gateway \
-  -p 8080:8080 \
-  -e SPRING_DATASOURCE_URL=jdbc:mysql://host.docker.internal:3306/studentdb \
-  -e SPRING_DATASOURCE_USERNAME=root \
-  -e SPRING_DATASOURCE_PASSWORD=root123 \
-  uoion-apps20:v1
+
+    docker run -d --name uoion-apps20 --add-host=host.docker.internal:host-gateway -p 8080:8080 -e SPRING_DATASOURCE_URL=jdbc:mysql://host.docker.internal:3306/studentdb -e SPRING_DATASOURCE_USERNAME=root -e SPRING_DATASOURCE_PASSWORD=root123  uoion-apps20:v1
 
 If MySQL is also running in Docker
 If you're using Docker Compose and your MySQL service is named mysql, then use:
