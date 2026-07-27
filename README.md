@@ -9,21 +9,26 @@
     docker compose logs -f [cointainer-name]
 
 Rebuild after code changes:
+
     mvn clean package -DskipTests
     docker compose up -d --build
 
 Build Docker Image:
+
     docker build -t student-app:v1 .
 
 Run only the Spring Boot container:
+
     docker run -d --name student-app -p 8080:8080 student-app:v1
     This works only if your MySQL is already running and reachable
 
 Access the application:
+
     http://localhost:8080/
 
 
 Verify Spring Boot is listening:
+
     docker exec -it uoion-apps20 sh
     netstat -tln
     
@@ -58,7 +63,9 @@ uoion-apps20/
 
 
 Build the Docker image
+
     docker build -t student-app:v1 .
 
 Verify:
+
     docker images
