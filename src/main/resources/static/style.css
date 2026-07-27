@@ -1,0 +1,45 @@
+body{
+
+    font-family: Arial;
+    background:#f4f4f4;
+
+}
+
+.container{
+
+    width:700px;
+    margin:40px auto;
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 0 10px gray;
+
+}
+
+h1{
+
+    color:#0B5394;
+
+}
+
+table{
+
+    width:100%;
+    border-collapse:collapse;
+    margin-top:20px;
+
+}
+
+th,td{
+
+    border:1px solid #ddd;
+    padding:10px;
+
+}
+
+th{
+
+    background:#0B5394;
+    color:white;
+
+}
