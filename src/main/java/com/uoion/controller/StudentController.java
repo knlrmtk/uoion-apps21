@@ -26,4 +26,10 @@ public class StudentController {
         repository.save(student);
         return "redirect:/";
     }
+
+    @GetMapping("/students")
+    public String viewStudents(Model model) {
+        model.addAttribute("students", repository.findAll());
+        return "students";
+    }
 }

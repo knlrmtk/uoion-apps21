@@ -2,29 +2,92 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Student Registration</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+        }
+
+        .navbar {
+            background-color: #333;
+            padding: 12px;
+            margin-bottom: 20px;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin-right: 20px;
+            font-weight: bold;
+        }
+
+        .navbar a:hover {
+            color: #ffd700;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        td {
+            padding: 8px;
+        }
+
+        input[type=text] {
+            width: 250px;
+            padding: 6px;
+        }
+
+        input[type=submit] {
+            padding: 8px 18px;
+        }
+    </style>
 </head>
 <body>
+
+<!-- Navigation Menu -->
+<div class="navbar">
+    <a th:href="@{/}">Add Student</a>
+    <a th:href="@{/students}">View Students</a>
+</div>
 
 <h2>Student Registration Form</h2>
 
 <form th:action="@{/saveStudent}" method="post">
 
-    First Name:
-    <input type="text" name="firstName"><br><br>
+    <table>
+        <tr>
+            <td>First Name:</td>
+            <td><input type="text" name="firstName" required></td>
+        </tr>
 
-    Last Name:
-    <input type="text" name="lastName"><br><br>
+        <tr>
+            <td>Last Name:</td>
+            <td><input type="text" name="lastName" required></td>
+        </tr>
 
-    City:
-    <input type="text" name="city"><br><br>
+        <tr>
+            <td>City:</td>
+            <td><input type="text" name="city"></td>
+        </tr>
 
-    Pincode:
-    <input type="text" name="pincode"><br><br>
+        <tr>
+            <td>Pincode:</td>
+            <td><input type="text" name="pincode"></td>
+        </tr>
 
-    Education:
-    <input type="text" name="education"><br><br>
+        <tr>
+            <td>Education:</td>
+            <td><input type="text" name="education"></td>
+        </tr>
 
-    <input type="submit" value="Save">
+        <tr>
+            <td colspan="2">
+                <input type="submit" value="Save">
+            </td>
+        </tr>
+    </table>
 
 </form>
 
